@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 100%;
+    height: 600px;
+    display: block;
+    /*margin-top: 5rem;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*border-radius: 250px;*/
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(67, 150, 156);
+    flex-direction: column;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    background: rgb(49, 44, 44);
+    color: rgb(67, 150, 156);
+    padding: 0 2rem;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 2rem;
+}
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 550px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+/******************** Section hero ************************/
+.hero {
+    height: 100vh;
+    /*background: url("css.png");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/******************** RESPONSIVE MENU ***************************************/
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+    .navbar .dropdown .dropdown:hover > ul {
+        left: -100%;
+    }
+}
+@media screen and (max-width: 799px) {
+
+    .image {
+        margin-top: 3rem;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        position: relative;
+        z-index: 20;
+    }
+    .ouvrir {
+        display: block;
+    }
+    .fermer {
+        display: none;
+    }
+    .open .ouvrir {
+        display: none;
+    }
+    .open .fermer {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75vh;
+        background: black;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(-100%);
+
+    }
+    .menu li a {
+        font-size: 2rem;
+
+    }
+    .open .menu {
+        transform: translateX(0);
+
+    }
+}
+
+/************************* Début PARCOURS SCOLAIRE **************************/
+.me {
+    text-align: center;
+    color: black;
+}
+.me h6 {
+    font-size: 15px;
+}
+
+.education {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    background-color: whitesmoke;
+
+}
+.educationleft {
+    width: 60%;
+    margin-right: 10%;
+}
+.educationleft h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 3rem;
+    margin-left: 48%;
+}
+.educationleft h4 {
+    font-size: 1.5rem;
+}
+
+.educationimg {
+    margin-top: 2px;
+    float: right;
+}
+.imgfac {
+    margin-top: 100px;
+    width: 90px;
+    border-radius: 30;
+    box-shadow: 5px 5px black;
+}
+/************************* Fin ******************************/
+
+/******************************* Début EXPERIENCE PRO *****************************/
+
+.workexperience {
+    background-image: url("lac2.png");
+    padding-bottom: 10%;
+}
+.workexperience h1 {
+    margin-top: 15px;
+    font-size: 3rem;
+}
+.title {
+    text-align: center;
+    color: white;
+}
+.works {
+    text-align: center;
+    margin-left: 23%;
+    /* écarte les bloc vers la droite */
+
+}
+.works h2 {
+    margin-top: 20px;
+}
+
+.work {
+    width: 70%;
+    height: 20%;
+    background-color: white;
+    align-items: center;
+}
+
+.work img {
+    margin-top: 10px;
+    margin-left: 1%;
+    width: 10%;
+    height: 3%;
+    border-radius: 40%;
+}
+
+/********************************* Fin ***************************/
+
+/*********************** Début de SKILLS *************************/
+
+.allskills {
+    background-color: whitesmoke;
+    padding-bottom: 10%;
+}
+.allskills h1 {
+    margin-top: 15px;
+    font-size: 3rem;
+}
+
+.title2 {
+    top: 10%;
+    text-align: center;
+    color: black;
+}
+
+.skills {
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 23%;
+    /* écarte les bloc vers la droite */
+
+}
+
+.skill {
+
+    width: 70%;
+    height: 20%;
+    /*background-color: rgb(67, 150, 156);*/
+    background-color: white;
+    align-items: center;
+}
+/************** Fin SKILLS **********************/
+
+/**************Début Contact *******************/
+
+footer {
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    /* popintié en haut*/
+    width: 100%;
+}
+
+.titre-footer {
+    top: 10%;
+    text-align: center;
+    color: black;
+}
+
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    top: 10%;
+    text-align: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 20px;
+}
+.bloc {
+    width: 25%;
+    margin: 0 30px;
+
+}
+
+.footer-contact h3,
+.footer-media h3,
+.footer-services h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-contact p {
+    padding: 6px 0;
+
+}
+
+.liste-portfolio {
+    list-style-type: none;
+    color: #333;
+}
+
+.liste-media {
+    list-style-type: none;
+    color: #333;
+}
+
+.liste-media li,
+.liste-portfolio {
+    padding: 2px 0;
+}
+
+.footer-contact a {
+    color: #1417dd;
+}
+
+.liste-portfolio a {
+    color: rgb(3,3,3);
+}
+
+.liste-media a:hover {
+    color: rgb(3,3,3);
+}
+
+.titre-footer {
+    top: 10%;
+    color: #333;
+    text-align: center;
+
+}
+.liste-portfolio {
+    top: 10px;
+}
+
+.liste-portfolio {
+    top: 10px;
+}
+
+.liste-media img {
+    width: 40px;
+    margin: 10px;
+    border-radius: 60%;
+}
+
+.liste-media a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+@media screen and (max-width:1300px) {
+    .contenu-footer {
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    .bloc {
+        width: 40%;
+        margin: 0;
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2) {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .contenu-footer {
+        width: 320px;
+    }
+    .bloc {
+        width: 300px;
+        margin: 30px;
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    .bloc:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+.copy {
+    text-align: center;
+}
+
+/**************** FIn de Contact ***********************/
+/*  
+- regler le pb du menu responsive qui cache le parcours scolaire 
+- stoper la page sous la dernière ligne du footer
+*/
+
